@@ -26,6 +26,15 @@
         "role_id": 662187180453527557,
         "role_id_mute": 662187459983179777
     },
+    "AM-0005": {
+        "category_id": 662466244854939658,
+        "discussion_channel_id": 662466245232295942,
+        "id": "AM-0005",
+        "name": "Seth'S Parkour Map",
+        "project_info_channel_id": 662466246129745920,
+        "role_id": 662466243659300878,
+        "role_id_mute": 662466243768352790
+    },
     "MG-0001": {
         "category_id": 660280443903672380,
         "discussion_channel_id": 660308769804124211,
