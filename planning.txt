@@ -1,0 +1,29 @@
+commands
+
+Add map:
+!add_map <type> <map_name>
+- add a categroy with that map name
+- add a discusion channel for that catogry
+- add a project-info channel for that catogory
+- give the right roles this catogory or the channels idk first the catogory try but i remember that being hard idk will see
+- if id see the channel
+- if !id do not see the channel
+
+!remove_map <map_name>
+- removes the catagory
+- move changels to archived
+- removes the roles
+- removes from the database
+
+!task_list
+- generate a file with all the maps as headings and then all the people working on that map
+
+-= Map name =-
+working on it
+working on it
+working on it
+working on it
+
+
+
+Same name should not be done
