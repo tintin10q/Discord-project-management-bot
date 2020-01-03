@@ -9,8 +9,9 @@ class Hive(commands.Cog):
         self._last_member = None
 
     @commands.command(name='add_map',
-                 help='| {}add_map <map_type> <map_name>'.format(get_command_prefix()))
+                 help='<map_type> <map_name>'.format(get_command_prefix()))
     @commands.has_role(admin_role)
+    @commands.guild_only()
     async def add_map(self, ctx, map_type, map_name):
         map_type = map_type.lower()
         map_name = map_name.title()
@@ -81,6 +82,7 @@ class Hive(commands.Cog):
         # Write translation data to database
         translations = db.get("translations")
         translations[map_name] = map_id
+        translations[map_id] = map_name
         db.set("translations", translations)
         await ctx.message.add_reaction('✅')
         await ctx.send('The Role names are: `{}` and `{}`'.format(map_id, '!' + map_id), delete_after=600)

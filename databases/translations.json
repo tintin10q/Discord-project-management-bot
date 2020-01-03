@@ -2,9 +2,19 @@
     "Elytra Space Course": "AM-0001",
     "Jumpman": "MG-0001",
     "Night At The Museum": "AM-0002",
+    "Open World Parkour": "AM-0006",
     "Parkour Map": "MG-0002",
     "Project Bronx": "AM-0003",
     "Redstone House": "SS-0001",
     "Seth'S Parkour Map": "AM-0005",
-    "Test Test Test": "TEST-0003"
+    "Test Test Test": "TEST-0003",
+    "AM-0001": "Elytra Space Course",
+"MG-0001":"Jumpman",
+"AM-0002": "Night At The Museum",
+"AM-0006":"Open World Parkour",
+"MG-0002": "Parkour Map",
+"AM-0003":"Project Bronx",
+"SS-0001": "Redstone House",
+"AM-0005":"Seth'S Parkour Map",
+"TEST-000":"Test Test Test"
 }

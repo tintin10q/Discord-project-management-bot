@@ -1,7 +1,7 @@
 from discord.ext import commands
 
 from databases.database_manager import db
-from utils.utils import get_command_prefix, admin_role
+from utils.utils import admin_role
 
 
 class Hive(commands.Cog):
@@ -10,9 +10,9 @@ class Hive(commands.Cog):
         self._last_member = None
 
     @commands.command(name='rename',
-                      help='| {}rename <old_map_name> <new_map_name>'.format(
-                          get_command_prefix()))
+                      help='<old_map_name> <new_map_name>')
     @commands.has_role(admin_role)
+    @commands.guild_only()
     async def add_map(self, ctx, old_name, new_name):
         old_name = old_name.title()
         new_name = new_name.title()

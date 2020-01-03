@@ -9,7 +9,7 @@ class Hive(commands.Cog):
         self.bot = bot
         self._last_member = None
 
-    @commands.command(name='get_map_id', help='| {}get_map_id <map_name>'.format(get_command_prefix()))
+    @commands.command(name='get_map_id', help='<map_name>')
     async def get_map_id(self, ctx, map_name):
         map_name = map_name.title()
         map_id = db.translate(map_name)

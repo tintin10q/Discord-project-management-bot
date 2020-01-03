@@ -1,4 +1,4 @@
-
+import re
 
 from databases.database_manager import db
 
@@ -35,3 +35,5 @@ def get_command_prefix():
 
 admin_role = get_bot_config()["admin_role_name"]
 archive_name = get_bot_config()["archived_channel_name"]
+map_role_pattern = re.compile('[A-Z]+-[0-9]+')
+map_role_mute_pattern = re.compile('\![A-Z]+-[0-9]+')

@@ -8,8 +8,9 @@ from utils.utils import get_command_prefix, admin_role, archive_name
 class Hive(commands.Cog):
 
     @commands.command(name='archive_map',
-                      help='| {}archive_map <map_name>'.format(get_command_prefix()))
+                      help='<map_name>'.format(get_command_prefix()))
     @commands.has_role(admin_role)
+    @commands.guild_only()
     async def archive_map(self, ctx, map_name):
         map_name = map_name.title()
         map_id = db.translate(map_name)
@@ -40,7 +41,7 @@ class Hive(commands.Cog):
             # Remove the map from the maps database
             maps.pop(map_id)
             db.set("maps", maps)
-
+            await ctx.message.add_reaction('✅')
         return
 
 
