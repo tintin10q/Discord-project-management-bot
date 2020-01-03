@@ -3,13 +3,15 @@ This bot can keep track of pitches and make channels for them
 
 # Setup
 To start using the bot make sure that you have installed the discord package with:
+
 `pip3 install discord`
 
 Then add your bot token in databases/bot_token.json with:
+
 `{"token":"Your bot token"}`
 
 # Help command 
-
+```
 This is the command list (might be not up to date)
 Hive:
   add_map       | -add_map <map_type> <map_name>------------- Adds a project to the server
@@ -23,3 +25,4 @@ Hive:
   help          Shows this message
 Type -help command for more info on a command.
 You can also type -help category for more info on a category.
+```
