@@ -8,9 +8,13 @@ class Database():
 
     def get(self, name):
         """Will return a database with the name given. So get(users) with get users.json"""
-        database_path = os.path.join(os.path.dirname(__file__), name + ".json")
-        database_file = open(database_path, "r+")
-        database = json.load(database_file)
+        try:
+            database_path = os.path.join(os.path.dirname(__file__), name + ".json")
+            database_file = open(database_path, "r+")
+            database = json.load(database_file)
+        except FileNotFoundError:
+            print("Could not find {}.json".format(name))
+            return None
         return database
 
     def set(self, name, data):

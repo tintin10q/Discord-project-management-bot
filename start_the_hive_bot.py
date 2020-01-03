@@ -1,6 +1,5 @@
 # bot.py
 
-import re
 import discord
 from discord.ext import commands
 
@@ -9,7 +8,16 @@ from utils.utils import get_bot_config, get_command_prefix
 
 bot_config = get_bot_config()
 
-token = db.get("bot_token")["token"]  # Have a file called bot_token.json with {"token":"token here"}
+token = db.get("bot_token")
+if token is None:
+    print('''
+NO TOKEN FOUND!
+Please add the bot token in: 'databases/bot_token.json' with:
+    
+{"token": "Your token here"}''')
+    exit()
+
+token = token["token"]  # Have a file called bot_token.json with {"token":"token here"}
 bot = commands.Bot(command_prefix=get_command_prefix())
 
 bot.load_extension("commands.add_map")
@@ -19,6 +27,7 @@ bot.load_extension("commands.get_map_id")
 bot.load_extension("commands.rename")
 bot.load_extension("commands.roll_dice")
 bot.load_extension("commands.show_intrest")
+
 
 @bot.event
 async def on_command_error(ctx, error):
