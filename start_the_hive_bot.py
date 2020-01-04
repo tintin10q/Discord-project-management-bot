@@ -30,6 +30,7 @@ bot.load_extension("commands.rename")
 bot.load_extension("commands.roll_dice")
 bot.load_extension("commands.show_interest")
 bot.load_extension("commands.signed_up_maps")
+bot.load_extension("commands.hello_world")
 
 
 @bot.event
