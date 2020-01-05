@@ -1,4 +1,5 @@
 from discord.ext import commands
+
 from utils.utils import admin_role
 
 
@@ -11,7 +12,8 @@ class Hive(commands.Cog):
     @commands.has_role(admin_role)
     @commands.guild_only()
     async def $NAME(self, ctx):
-        pass
+
+    pass
 
 
 def setup(bot):

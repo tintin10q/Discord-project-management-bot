@@ -1,21 +1,21 @@
 {
-    "admin_role_name": "Hive Master",
-    "archived_channel_name": "Archived",
-    "command_prefix": "-",
-    "map_ids": {
-        "am": 7,
-        "mm": 4,
-        "mp": 0,
-        "ss": 2,
-        "test": 4
-    },
-    "map_types": {
-        "adventure map": "am",
-        "mash up": "mp",
-        "mashup": "mp",
-        "mashup pack": "mp",
-        "minigame": "mm",
-        "survival spawn": "ss",
-        "test": "test"
-    }
+  "admin_role_name": "Hive Master",
+  "archived_channel_name": "Archived",
+  "command_prefix": "-",
+  "map_ids": {
+    "am": 7,
+    "mm": 4,
+    "mp": 0,
+    "ss": 2,
+    "test": 4
+  },
+  "map_types": {
+    "adventure map": "am",
+    "mash up": "mp",
+    "mashup": "mp",
+    "mashup pack": "mp",
+    "minigame": "mm",
+    "survival spawn": "ss",
+    "test": "test"
+  }
 }

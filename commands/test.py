@@ -1,4 +1,5 @@
 from discord.ext import commands
+
 from utils.utils import admin_role
 
 
@@ -13,9 +14,8 @@ class Hive(commands.Cog):
     async def test(self, ctx, member):
         member = str(member)
         memberConverter = commands.MemberConverter()
-        member = await memberConverter.convert(ctx,member)
+        member = await memberConverter.convert(ctx, member)
         await ctx.send('```{}```'.format(member))
-
 
 
 def setup(bot):

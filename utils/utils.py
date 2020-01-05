@@ -27,11 +27,14 @@ def get_map_types():
         map_types_list.extend([i[0], i[1]])
     return map_types_list
 
+
 def get_bot_config():
     return db.get("bot_config")
 
+
 def get_command_prefix():
     return db.get("bot_config")["command_prefix"]
+
 
 admin_role = get_bot_config()["admin_role_name"]
 archive_name = get_bot_config()["archived_channel_name"]

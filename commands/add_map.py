@@ -1,7 +1,9 @@
 import discord
 from discord.ext import commands
-from utils.utils import get_command_prefix, admin_role, get_map_types, get_bot_config, generate_map_id
+
 from databases.database_manager import db
+from utils.utils import get_command_prefix, admin_role, get_map_types, get_bot_config, generate_map_id
+
 
 class Hive(commands.Cog):
     def __init__(self, bot):
@@ -9,7 +11,7 @@ class Hive(commands.Cog):
         self._last_member = None
 
     @commands.command(name='add_map',
-                 help='<map_type> <map_name>'.format(get_command_prefix()))
+                      help='<map_type> <map_name>'.format(get_command_prefix()))
     @commands.has_role(admin_role)
     @commands.guild_only()
     async def add_map(self, ctx, map_type, map_name):
@@ -86,6 +88,7 @@ class Hive(commands.Cog):
         db.set("translations", translations)
         await ctx.message.add_reaction('✅')
         await ctx.send('The Role names are: `{}` and `{}`'.format(map_id, '!' + map_id), delete_after=600)
+
 
 def setup(bot):
     bot.add_cog(Hive(bot))

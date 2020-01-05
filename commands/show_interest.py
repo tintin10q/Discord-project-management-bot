@@ -10,7 +10,8 @@ class Hive(commands.Cog):
         self._last_member = None
 
     @commands.command(name='show_interest',
-                      help='<map_name> or <all/*>')
+                      help='<map_name> or <all/*>',
+                      aliases=["sup"])
     @commands.guild_only()
     async def show_interest(self, ctx, map_name=None):
         map_name = map_name.title()

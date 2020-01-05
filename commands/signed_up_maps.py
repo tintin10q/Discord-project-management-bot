@@ -1,8 +1,7 @@
-from utils.utils import map_role_pattern
-
 from discord.ext import commands
 
 from databases.database_manager import db
+from utils.utils import map_role_pattern
 
 
 class Hive(commands.Cog):
@@ -11,11 +10,12 @@ class Hive(commands.Cog):
         self._last_member = None
 
     @commands.command(name='signed_up_maps',
-                      help='<member_name>')
+                      help='<member_name>',
+                      aliases=["sum"])
     @commands.guild_only()
     async def signed_up_maps(self, ctx, member):
         memberConverter = commands.MemberConverter()
-        member = await memberConverter.convert(ctx,member)
+        member = await memberConverter.convert(ctx, member)
         map_roles = []
         for role in member.roles:
             if map_role_pattern.match(role.name):
