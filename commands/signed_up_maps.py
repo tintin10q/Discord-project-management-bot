@@ -11,7 +11,7 @@ class Hive(commands.Cog):
 
     @commands.command(name='signed_up_maps',
                       help='<member_name>',
-                      aliases=["sum"])
+                      aliases=["sup"])
     @commands.guild_only()
     async def signed_up_maps(self, ctx, member):
         memberConverter = commands.MemberConverter()

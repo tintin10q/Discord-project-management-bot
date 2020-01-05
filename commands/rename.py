@@ -9,8 +9,9 @@ class Hive(commands.Cog):
         self.bot = bot
         self._last_member = None
 
-    @commands.command(name='rename',
-                      help='<old_map_name> <new_map_name>')
+    @commands.command(name='rename_map',
+                      help='<old_map_name> <new_map_name>',
+                      aliases=["rename"])
     @commands.has_role(admin_role)
     @commands.guild_only()
     async def add_map(self, ctx, old_name, new_name):
