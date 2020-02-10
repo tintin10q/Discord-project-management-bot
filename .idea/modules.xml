@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Discord-project-management-bot.iml" filepath="$PROJECT_DIR$/.idea/Discord-project-management-bot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/hive-discord-bot.iml" filepath="$PROJECT_DIR$/.idea/hive-discord-bot.iml" />
     </modules>
   </component>
 </project>

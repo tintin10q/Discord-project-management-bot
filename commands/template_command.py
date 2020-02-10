@@ -9,7 +9,7 @@ class Hive(commands.Cog):
         self._last_member = None
 
     @commands.command(name='$NAME', help='')
-    @commands.has_role(admin_role)
+    @commands.has_role('Hive Master')
     @commands.guild_only()
     async def $NAME(self, ctx):
 

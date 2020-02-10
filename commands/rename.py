@@ -12,7 +12,7 @@ class Hive(commands.Cog):
     @commands.command(name='rename_map',
                       help='<old_map_name> <new_map_name>',
                       aliases=["rename"])
-    @commands.has_role(admin_role)
+    @commands.has_role('Hive Master')
     @commands.guild_only()
     async def add_map(self, ctx, old_name, new_name):
         old_name = old_name.title()

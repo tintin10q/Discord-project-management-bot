@@ -9,7 +9,7 @@ class Hive(commands.Cog):
 
     @commands.command(name='archive_map',
                       help='<map_name>',)
-    @commands.has_role(admin_role)
+    @commands.has_role('Hive Master')
     @commands.guild_only()
     async def archive_map(self, ctx, map_name):
         map_name = map_name.title()

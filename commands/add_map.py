@@ -12,7 +12,7 @@ class Hive(commands.Cog):
 
     @commands.command(name='add_map',
                       help='<map_type> <map_name>'.format(get_command_prefix()))
-    @commands.has_role(admin_role)
+    @commands.has_role('Hive Master')
     @commands.guild_only()
     async def add_map(self, ctx, map_type, map_name):
         map_type = map_type.lower()

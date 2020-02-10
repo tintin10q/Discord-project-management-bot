@@ -10,7 +10,7 @@ class Hive(commands.Cog):
         self._last_member = None
 
     @commands.command(name='change_prefix', help='<prefix>')
-    @commands.has_role(admin_role)
+    @commands.has_role('Hive Master')
     async def change_prefix(self, ctx, new_prefix):
         bot_config = get_bot_config()
         bot_config["command_prefix"] = new_prefix
